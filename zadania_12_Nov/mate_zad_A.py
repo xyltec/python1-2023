@@ -3,14 +3,13 @@ import unittest
 
 def get_full_bottles(leftovers: list[int], capacity: int) -> int:
     if capacity == 0:
-        return len(leftovers)   # "corner case"
+        return len(leftovers)  # "corner case"
     total = sum(leftovers)
     full_bottles = int(total / capacity)
     return min(len(leftovers), full_bottles)
 
 
 class MateZA_Test(unittest.TestCase):
-
     def test_1(self):
         res = get_full_bottles([200, 200, 200], 500)
         assert res == 1

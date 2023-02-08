@@ -1,12 +1,11 @@
 import unittest
 
 
-
 def get_final_snake_size(init: int, food: list[int]) -> int:
     pass
 
-class SlitherTest(unittest.TestCase):
 
+class SlitherTest(unittest.TestCase):
     def test_1(self):
         self.assertTrue(get_final_snake_size(2, [1, 2, 3]), 4)
         self.assertTrue(get_final_snake_size(2, [1, 2, 4]), 8)

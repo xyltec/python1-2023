@@ -6,7 +6,6 @@ def get_equal_capacity(leftovers: list[int]) -> int:
 
 
 class MateZB_Test(unittest.TestCase):
-
     def test_1(self):
         assert get_equal_capacity([10, 20]) == 15
 

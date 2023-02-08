@@ -21,7 +21,15 @@ w.sort()  # N log N   (log o podstawie 2)
 
 # --------------------
 
-w = [0, 0, 0, 0, 0, 0, 0, ]  # 7600 x 4300
+w = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+]  # 7600 x 4300
 w[3] = 1
 print(w)
 
@@ -64,5 +72,5 @@ d = json.loads(sss)
 print(d)
 print(type(d))  # deserializacja
 
-for (k,v) in d.items():
+for k, v in d.items():
     print(f'key={k} value={v}')

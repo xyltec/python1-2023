@@ -3,9 +3,9 @@ from faker import Faker
 Faker.seed(111)
 fake = Faker('pl_PL')
 
-unique_last_names = set([fake.last_name().lower() for _ in range(10 ** 5)])
+unique_last_names = set([fake.last_name().lower() for _ in range(10**5)])
 
-name_frequency = dict()   # name -> n_of_occurrences
+name_frequency = dict()  # name -> n_of_occurrences
 
 
 letter_2_names = dict()
@@ -18,8 +18,12 @@ for name in unique_last_names:
 for names in letter_2_names.values():
     names.sort()
 
+
 def get_name_autocompletion(prefix: str) -> list[str]:
-    candidates = [name for name in letter_2_names[prefix[:2]] if name.startswith(prefix)]  # comprehension
+    candidates = [
+        name for name in letter_2_names[prefix[:2]] if name.startswith(prefix)
+    ]  # comprehension
     return candidates
+
 
 print(get_name_autocompletion('xi'))

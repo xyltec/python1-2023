@@ -6,4 +6,3 @@ def compute_diffs(w: list[int]) -> list[int]:
     for idx in range(len(w) - 1):
         diffs.append(w[idx + 1] - w[idx])
     return diffs
-

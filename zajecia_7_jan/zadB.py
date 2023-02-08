@@ -1,4 +1,5 @@
 from faker import Faker
+
 # instalacja: pip install Faker
 Faker.seed(111)
 fake = Faker('pl_PL')
@@ -24,7 +25,6 @@ print(generate_username(imienazwisko[0], imienazwisko[1]))
 usernames = set()
 N = 10**6
 for i in range(N):
-
     name = fake.name()
     # print(f'{name:40s}', ' # ', get_imie_nazwisko(name))
     imienazwisko = get_imie_nazwisko(name)

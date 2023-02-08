@@ -1,4 +1,5 @@
 from faker import Faker
+
 Faker.seed(111)
 
 fake = Faker('pl_PL')
@@ -10,8 +11,3 @@ for i in range(3):
     print(fake.ssn())
     print(fake.vat_id())
     print('-' * 30)
-
-
-
-
-

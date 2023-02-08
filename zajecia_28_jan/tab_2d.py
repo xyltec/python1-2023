@@ -10,6 +10,5 @@ for row in tab2:
     print(row)
 
 
-
 gg = ['.'] * 20
 print(gg)

@@ -6,11 +6,11 @@ def ts():
     return datetime.now().timestamp()
 
 
-pare_liczb = [randint(0, 10 ** 6) for i in range(10000)]
+pare_liczb = [randint(0, 10**6) for i in range(10000)]
 
 # w = set()
 w = []
-for i in range(10 ** 8):
+for i in range(10**8):
     # w.add(i)
     w.append(i)
 

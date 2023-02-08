@@ -1,7 +1,6 @@
-
-
 def foo(x):
     return x**2, x**3
+
 
 t = foo(3)
 print(t)
@@ -20,10 +19,6 @@ for i in range(len(names)):
 
 print('-' * 30)
 
-for (name, score) in zip(names, scores):
+for name, score in zip(names, scores):
     message = f"{name}'s score is {score}"
     print(message)
-
-
-
-

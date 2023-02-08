@@ -1,6 +1,6 @@
 def is_mixed_case(s: str) -> bool:
-    only_upper = (s.upper() == s)
-    only_lower = (s.lower() == s)
+    only_upper = s.upper() == s
+    only_lower = s.lower() == s
     return (not only_lower) and (not only_upper)
 
 

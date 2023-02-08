@@ -6,7 +6,6 @@ def is_cut_possible(material: list[int], product: list[int]) -> bool:
 
 
 class BookingTest(unittest.TestCase):
-
     def test_1(self):
         self.assertTrue(is_cut_possible([10, 20], [10, 15]))
         self.assertTrue(is_cut_possible([10, 20], [10, 20]))

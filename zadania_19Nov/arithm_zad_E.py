@@ -21,7 +21,6 @@ def is_almost_arithmetic(w: list[int]) -> bool:
 
 
 class AlmostArithTest(unittest.TestCase):
-
     def test_1(self):
         self.assertTrue(is_almost_arithmetic([1, 2, 3]))
         self.assertTrue(is_almost_arithmetic([15, 20, 25, 35]))

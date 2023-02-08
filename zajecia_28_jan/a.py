@@ -1,4 +1,3 @@
-
 a = []
 a.append('aa')
 a.append('bb')
@@ -8,7 +7,7 @@ w = ['x', 'y', 'z']
 a.extend(w)
 print(a)
 
-f = ['abra','kadabra','hokus','pokus']
+f = ['abra', 'kadabra', 'hokus', 'pokus']
 print('-'.join(f))
 
 # zadanie -- wyliczyć ile ma być znaków '*' w rzędzie o nr. "x"

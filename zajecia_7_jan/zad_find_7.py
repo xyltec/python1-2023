@@ -22,4 +22,4 @@ def sol2(n: int):
 
 
 # print(sol1(10 ** 7))
-print(sol2(10 ** 7))
+print(sol2(10**7))

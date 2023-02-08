@@ -1,5 +1,5 @@
 x = 12
-print(x ** 2)
+print(x**2)
 
 w = [2, 4, 9]
 print(min(w))

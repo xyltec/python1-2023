@@ -13,17 +13,17 @@ def compute_diffs(w: list[int]) -> list[int]:
 #     unique_diffs = set(diffs)
 #     return len(unique_diffs) == 1
 
+
 def is_arithmetic(w: list[int]) -> bool:
     n = len(w)
     r0 = w[1] - w[0]
-    for idx in range(n-1):
-        if w[idx+1] - w[idx] != r0:
+    for idx in range(n - 1):
+        if w[idx + 1] - w[idx] != r0:
             return False
     return True
 
 
 class ArithTest(unittest.TestCase):
-
     def test_1(self):
         self.assertTrue(is_arithmetic([1, 2, 3]))
         self.assertTrue(is_arithmetic([15, 20, 25, 30]))

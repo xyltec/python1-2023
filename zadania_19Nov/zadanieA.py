@@ -4,6 +4,7 @@ from random import randint
 
 # wylosować 30 liczb z przedziału [0,99] i sprawdzić czy jakieś się powtórzyły
 
+
 def solve_A_by_sort():
     w = []
     for i in range(30):
@@ -28,9 +29,6 @@ def solve_A_attempt1():
     w = [randint(0, 99) for i in range(30)]  # comprehension
     print(w)
     print(Counter(w))
-
-
-
 
 
 if __name__ == '__main__':

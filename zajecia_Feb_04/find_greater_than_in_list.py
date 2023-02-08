@@ -19,6 +19,7 @@ z = (1, 2, 5)
 # z.append(8)
 
 import random
+
 random.seed(55)
 
 
@@ -28,11 +29,11 @@ def get_random_list(n: int) -> list[float]:
         res.append(round(random.random(), 2))
     return res
 
+
 import unittest
 
 
 class TestFinder(unittest.TestCase):
-
     def test_simple(self):
         a = [0.1, 0.4, 0.9, 0.8, 0.1]
         res = find_greater_than(0.5, a)
@@ -61,6 +62,8 @@ class TestFinder(unittest.TestCase):
         res = find_greater_than(0.8, a)
         # sprawdzić jak długo to trwa
 
+
+s = 'abra kadabra'
 
 if __name__ == '__main__':
     unittest.main()

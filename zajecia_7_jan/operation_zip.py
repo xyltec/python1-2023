@@ -1,5 +1,5 @@
 users = ['A', 'B', 'C']
-scores= [10, 80, 4]
+scores = [10, 80, 4]
 
 """
 postortować userów wg. scores ... 
