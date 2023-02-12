@@ -8,12 +8,19 @@ packages = [{include = "python1_2022"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Faker = "^16.7.0"
+Faker = "^16.8.1"
+poethepoet = "^0.18.1"
+Pillow = "^9.4.0"
+numpy = "^1.24.2"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.1"
 black = "^23.1.0"
+
+[tool.poe.tasks.format]
+help = "Format code using black formatter"
+cmd = "black -l 120 --skip-string-normalization src"
 
 [build-system]
 requires = ["poetry-core"]
