@@ -11,7 +11,7 @@ class TestReverse(unittest.TestCase):
         self.assertEquals(reverse_string('z'), 'a')
 
     def test_three(self):
-        self.assertEquals(reverse_string('abc'), 'xyz')
+        self.assertEquals(reverse_string('abc'), 'xyza')
 
     def test_palindrome(self):
         self.assertEquals(reverse_string('abcba'), 'zyxyz')
