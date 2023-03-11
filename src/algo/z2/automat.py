@@ -19,26 +19,40 @@ def run_tests(generator, solver):
     times = []
     while size < 100000:
         print(f'testing solver for {size=}')
-        data = generator(size)
-        REPETITIONS = 400
+        data = generator(int(size))
+        REPETITIONS = 0
         time_sum = 0
-        for i in range(REPETITIONS):
+        while True:
             st = datetime.now().timestamp()
             ret = solver(data)
             en = datetime.now().timestamp()
             time_sum += (en - st)
+            REPETITIONS += 1
+            if time_sum > 0.1:
+                break
 
         sizes.append(size)
-        times.append(time_sum / REPETITIONS * 10**6)
-        size *= 2
+        times.append(time_sum / REPETITIONS * 10 ** 6)
+        size *= 1.1
 
     return sizes, times
 
 
 if __name__ == '__main__':
     x, y = run_tests(generate_data, solve_problem)
+    linxx = [0.01 * x_**1 for x_ in x]
+    quadx = [0.01 * x_**2 for x_ in x]
+    cubex = [0.01 * x_**3 for x_ in x]
 
+    plt.plot(x, linxx, linestyle='dotted')
+    plt.plot(x, quadx, linestyle='dotted')
+    plt.plot(x, cubex, linestyle='dotted')
     plt.plot(x, y)
+    plt.legend(['O(N)', 'O(N**2)', 'O(N**3)', 'algorytm'], loc='upper left')
+
     plt.xlabel("Rozmiar danych")
     plt.ylabel("Czas wykonania (usec)")
+    plt.yscale('log')
+    plt.xscale('log')
     plt.show()
+    plt.savefig('aa.png')
