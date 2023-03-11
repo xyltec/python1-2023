@@ -27,8 +27,8 @@ count   time (us)
 """
 
 if __name__ == '__main__':
-    w = gen_random_numbers(12800, seed_number=111)
-    REPETITIONS = 2000
+    w = gen_random_numbers(12800 * 4, seed_number=111)
+    REPETITIONS = 200
     time_sum = 0
     for i in range(REPETITIONS):
         st = datetime.now().timestamp()
