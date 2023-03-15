@@ -29,3 +29,6 @@ def run_tests(generator, solver):
         size *= 2
 
     return sizes, times
+
+if __name__ == '__main__':
+    x, y = run_tests(generate_data, solve_problem)
