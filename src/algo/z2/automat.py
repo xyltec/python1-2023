@@ -5,26 +5,26 @@ from random import seed, randint
 
 def generate_data(data_size):
     seed(111)
-    return [randint(0, 10 ** 6) for _ in range(data_size)]
+    return {"a": [randint(0, 10 ** 6) for _ in range(data_size)]}
 
 
-def solve_problem(data):
-    ret = sorted(data)
+def solve_problem(a):
+    ret = sorted(a)
     return ret
 
 
-def run_tests(generator, solver):
+def run_tests(generator, solver, step_factor=1.3, max_size=10 ** 5):
     size = 10
     sizes = []
     times = []
-    while size < 100000:
-        print(f'testing solver for {size=}')
+    while size < max_size:
+        print(f'testing solver for {size=:.0f} ...', end=' ')
         data = generator(int(size))
         REPETITIONS = 0
         time_sum = 0
         while True:
             st = datetime.now().timestamp()
-            ret = solver(data)
+            ret = solver(**data)
             en = datetime.now().timestamp()
             time_sum += (en - st)
             REPETITIONS += 1
@@ -32,17 +32,20 @@ def run_tests(generator, solver):
                 break
 
         sizes.append(size)
-        times.append(time_sum / REPETITIONS * 10 ** 6)
-        size *= 1.1
+        exec_time = time_sum / REPETITIONS * 10 ** 6
+        print(f' execution time: {int(exec_time / 10**3)}ms')
+        times.append(exec_time)
+        size *= step_factor
 
     return sizes, times
 
 
-if __name__ == '__main__':
-    x, y = run_tests(generate_data, solve_problem)
-    linxx = [0.01 * x_**1 for x_ in x]
-    quadx = [0.01 * x_**2 for x_ in x]
-    cubex = [0.01 * x_**3 for x_ in x]
+def visualize(sizes, times):
+    x = sizes
+    y = times
+    linxx = [0.01 * x_ ** 1 for x_ in x]
+    quadx = [0.01 * x_ ** 2 for x_ in x]
+    cubex = [0.01 * x_ ** 3 for x_ in x]
 
     plt.plot(x, linxx, linestyle='dotted')
     plt.plot(x, quadx, linestyle='dotted')
@@ -55,4 +58,9 @@ if __name__ == '__main__':
     plt.yscale('log')
     plt.xscale('log')
     plt.show()
-    plt.savefig('aa.png')
+    # plt.savefig('aa.png')
+
+
+if __name__ == '__main__':
+    x, y = run_tests(generate_data, solve_problem)
+    visualize(x, y)
