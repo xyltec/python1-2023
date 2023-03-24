@@ -26,6 +26,24 @@ def run_tests(generator, solver, step_factor=1.3, max_size=10 ** 5):
 
     return sizes, times
 
+def visualize(sizes, times):
+    x = sizes
+    y = times
+    linxx = [0.01 * x_ ** 1 for x_ in x]
+    quadx = [0.01 * x_ ** 2 for x_ in x]
+    cubex = [0.01 * x_ ** 3 for x_ in x]
+
+    plt.plot(x, linxx, linestyle='dotted')
+    plt.plot(x, quadx, linestyle='dotted')
+    plt.plot(x, cubex, linestyle='dotted')
+    plt.plot(x, y)
+    plt.legend(['O(N)', 'O(N**2)', 'O(N**3)', 'algorytm'], loc='upper left')
+
+    plt.xlabel("Rozmiar danych")
+    plt.ylabel("Czas wykonania (usec)")
+    plt.yscale('log')
+    plt.xscale('log')
+    plt.show()
 
 def solve(a: list[int]) -> int:
     max_result = 0
