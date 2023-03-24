@@ -34,3 +34,14 @@ def solve(a: list[int]) -> int:
         if res > max_result:
             max_result = res
     return max_result
+
+def generate_data(data_size):
+    seed(111)
+    mx_num = 10 ** 4
+    data_a = [randint(0, mx_num) for _ in range(data_size)]
+    return {"a": data_a}
+
+
+if __name__ == '__main__':
+    x, y = run_tests(generate_data, solve, max_size=10**4)
+    visualize(x, y)
