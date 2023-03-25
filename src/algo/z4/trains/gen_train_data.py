@@ -19,5 +19,10 @@ def generate_data(data_size):
 
 
 if __name__ == '__main__':
-    rr = generate_data(10)
-    print(rr)
+    train_schedule = generate_data(40)
+    destinations = [[] for _ in range(N_CITIES)]
+    for (src, dst) in train_schedule:
+        # .... jakoś trzeba zupdate'ować do destinations[src]
+        pass
+
+    # jakoś trzeba przejść przez destinations i sprawdzić który src ma najdłuższą listę destinations[src]
