@@ -15,12 +15,17 @@ def find_longest_trip(train_data: list[tuple[int, int]]) -> bool:
 
 
 def random_travel(at: int, destinations: list[list[int]]):
-    pass
+    MAX_STEPS = 10
+    # jesteśmy na "at"
+    for i in range(MAX_STEPS):
+        next_at = #... wybrać z możliwych destinations[at]
+        #print...
+        # at = next_at
 
 
 if __name__ == '__main__':
     seed(107)
-    # train_data = [(1, 2), (2, 4), (4, 3), (3, 1), (3, 5), (5, 1)]
+    # train_data = [(1, 2), (2, 4), (4, 3), (3, 1), (3, 5), (5, 1), (4, 3)]
     # train_data = [(1, 2), (2, 4), (4, 3), (3, 1)]
     train_data = generate_data(25)
 
