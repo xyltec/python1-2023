@@ -18,8 +18,8 @@ def random_travel(at: int, destinations: list[list[int]]):
     MAX_STEPS = 10
     # jesteśmy na "at"
     for i in range(MAX_STEPS):
-        next_at = #... wybrać z możliwych destinations[at]
-        #print...
+        next_at = 0  # ... wybrać z możliwych destinations[at]
+        # print...
         # at = next_at
 
 
