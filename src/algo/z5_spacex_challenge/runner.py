@@ -1,6 +1,6 @@
 from random import random, seed
 from sim import Simulator, WindConditions
-from src.algo.z5_spacex_challenge.dumb_ship import DumbShip
+from dumb_ship import DumbShip
 from veloship import VeloShip
 from model import ShipState, SimulationResult, FinalState
 import numpy as np

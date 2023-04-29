@@ -1,7 +1,7 @@
 from copy import copy
 from model import *
-from src.algo.z5_spacex_challenge.dumb_ship import DumbShip
-from src.algo.z5_spacex_challenge.veloship import VeloShip
+from dumb_ship import DumbShip
+from veloship import VeloShip
 from random import gauss
 
 
