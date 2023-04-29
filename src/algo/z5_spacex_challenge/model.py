@@ -29,10 +29,15 @@ class SimulationResult:
 
 class Ship:
 
+    def __init__(self, fuel: float = 100):
+        # konstruktor
+        self.fuel = fuel
+
     def initialize(self, state: ShipState):
         # todo:  you might save the initial state
         pass
 
     def get_thrust_vectors(self, time: float, state: ShipState) -> ThrustVectors:
+        # print(f'current fuel level: {self.fuel}')
         # todo: place for your work....
         return ThrustVectors(a_vertical=0)

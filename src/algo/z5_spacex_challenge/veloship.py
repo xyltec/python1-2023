@@ -1,7 +1,7 @@
 from src.algo.z5_spacex_challenge.model import *
 from my_helpers.velo_control import *
 
-
+# veloship jest ship-em
 class VeloShip(Ship):
 
     def initialize(self, state: ShipState):
