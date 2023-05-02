@@ -1,6 +1,7 @@
 from copy import copy
 from model import *
-from src.algo.z5_spacex_challenge.veloship import VeloShip
+from dumb_ship import DumbShip
+from veloship import VeloShip
 from random import gauss
 
 
@@ -65,6 +66,7 @@ class Simulator:
 
 if __name__ == '__main__':
     MAX_THRUST = 20
-    sim = Simulator(VeloShip())
+    # sim = Simulator(VeloShip())
+    sim = Simulator(DumbShip())
     result = sim.run_simulation(ShipState(height=10, speed=0, max_thrust=MAX_THRUST))
     print(f'\nresult: {result.status}\tfuel_used:{result.fuel_used:.0f}')
