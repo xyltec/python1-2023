@@ -1,5 +1,6 @@
 from random import random, seed
 from sim import Simulator, WindConditions
+from dumb_ship import DumbShip
 from veloship import VeloShip
 from model import ShipState, SimulationResult, FinalState
 import numpy as np
@@ -13,7 +14,7 @@ def run(n=50, wind_avg=0, wind_std=0.1, text='RUN', debug=False):
     total_ok = 0
     fuels = []
     for _ in range(n):
-        sim = Simulator(VeloShip())
+        sim = Simulator(DumbShip())
         result = sim.run_simulation(ShipState(height=10 + 2 * random(), speed=0, max_thrust=MAX_THRUST),
                                     wind=WindConditions(wind_avg, wind_std), debug=False)
         if debug:
@@ -31,4 +32,4 @@ if __name__ == '__main__':
     run(n=100, text='NO WIND', wind_avg=0, wind_std=0.001)
     run(n=100, text='CONSTANT WIND DOWN', wind_avg=-1, wind_std=0.001)
     run(n=100, text='VARIABLE WIND DOWN', wind_avg=-1, wind_std=1)
-    run(n=100, text='HURRICANE WIND DOWN', wind_avg=0, wind_std=50)
+    run(n=100, text='TURBULENT WIND', wind_avg=0, wind_std=50)
