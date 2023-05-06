@@ -20,3 +20,6 @@ class FractionTests(unittest.TestCase):
         f1 = Fraction(1, 2)
         f2 = Fraction(1, 2)
         self.assertAlmostEqual(add(f1,f2).value(), 1.0)
+        
+if __name__ == "__main__":
+   unittest.main()
