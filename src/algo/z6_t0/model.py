@@ -9,9 +9,9 @@ class Fraction:
 
     def value(self):
         return self.numer / self.denom
-    def numer(self):
+    def get_numer(self):
         return self.numer
-    def denom(self):
+    def get_denom(self):
         return self.denom 
 
 if __name__ == '__main__':
