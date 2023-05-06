@@ -1,4 +1,4 @@
-from src.algo.z5_spacex_challenge.model import *
+from model import *
 from my_helpers.velo_control import *
 
 # veloship jest ship-em

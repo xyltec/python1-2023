@@ -38,6 +38,11 @@ class Ship:
         pass
 
     def get_thrust_vectors(self, time: float, state: ShipState) -> ThrustVectors:
-        # print(f'current fuel level: {self.fuel}')
-        # todo: place for your work....
+        h = state.height
+        v = state.speed
+        thr = 0
+
+        # rocket is too close to the ground and moving too fast
+        if h < 1 and v > 1:
+            thr = -1.5
         return ThrustVectors(a_vertical=0)
