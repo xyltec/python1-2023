@@ -6,7 +6,7 @@ zadanie4(*):
 from random import seed
 
 from gen_train_data import generate_data
-from zadanie_a import extract_destination_info, print_destinations
+from trains_a import extract_destination_info, print_destinations
 
 
 def find_longest_trip(train_data: list[tuple[int, int]]) -> bool:
