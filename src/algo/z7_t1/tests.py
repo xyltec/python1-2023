@@ -22,3 +22,6 @@ class KeyLockTest(unittest.TestCase):
 
     def test_simple5(self):
         self.assertEquals(open_lock([5, 5, 6], [0]), -1)
+
+
+unittest.main()
