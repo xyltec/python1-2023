@@ -26,7 +26,7 @@ def equalize_parity(a: list[int]) -> bool:
     for num in a:
         if num % 2 != first_parity:
             parity_test = False
-
+            break
     if parity_test or min(a) % 2 != 0:
         return True
     
