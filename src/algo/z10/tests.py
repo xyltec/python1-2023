@@ -17,5 +17,16 @@ class SequenceTest(unittest.TestCase):
         self.assertEquals(longest_sequence("",">"),0)
     def test_7(self):
         self.assertEquals(longest_sequence("<<<<<>>>>><<<<<>>>>>",">"),5)
+    def test_8(self):
+        self.assertEquals(longest_sequence(">>>>>>>>>>>>>>>",">"),15)
+    def test_9(self):
+        self.assertEquals(longest_sequence(">>>>>>>>>>>>>>>","<"),0)
+    def test_10(self):
+        self.assertEquals(longest_sequence("<<<<<<<<<<<<<<<","<"),15)
+    def test_11(self):
+        self.assertEquals(longest_sequence("<<<<<<<<<<<<<<<",">"),0)
+    def test_12(self):
+        self.assertEquals(longest_sequence("123123",">"),-1)
+        
 if __name__ == '__main__':
     unittest.main()
