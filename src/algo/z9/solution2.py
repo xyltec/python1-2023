@@ -27,6 +27,13 @@ def get_latest(versions: list[str]) -> str:
         
     return f'{major}.{minor}.{patch}'
 
+def get_latest_better(versions: list[str]) -> str:
+    v = []
+    for version in versions:
+        major,minor,patch = version.split(".")
+        v.append([major,minor,patch])
+    major,minor,patch = max(v)
+    return f'{major}.{minor}.{patch}'
 
 def next_version(version: str, level: int) -> str:
     """
