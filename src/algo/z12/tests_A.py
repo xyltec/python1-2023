@@ -22,6 +22,12 @@ class SyllablesTest(unittest.TestCase):
     def test_6(self):
         self.assertEquals(get_min_number_of_operations([1, -1, -2, -3, -4]), 1)
 
+    def test_7(self):
+        self.assertEquals(get_min_number_of_operations([1, 0, 1]), 0)
+
+    def test_8(self):
+        self.assertEquals(get_min_number_of_operations([1, 0, 1, -1]), 1)
+
 
 if __name__ == '__main__':
     unittest.main()
