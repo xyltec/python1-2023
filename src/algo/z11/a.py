@@ -49,3 +49,17 @@ t = (1, 2, 3)  # 529344067295497451
 print(t.__hash__())
 tt = ('abra', 'kadabra')
 print(tt.__hash__())  # 8076849099501633122
+
+
+
+print(tt.__hash__() % 10)
+
+
+
+pesel = 1234
+imie = 'Jan'
+nazwisko = 'Nowak'
+
+
+h = (pesel, imie, nazwisko).__hash__()
+print(h)
