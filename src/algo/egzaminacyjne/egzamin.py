@@ -1,7 +1,3 @@
-sample_input1 = "X..........................X.......X..........X......................X..X..........................X"
-sample_input2 = "...................................................................................................."
-sample_input3 = "............................................X......................................................."
-sample_input4 = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 def target_practice(map: str):
 
     smaller_strings = [map[i:i+10] for i in range(0, len(map), 10)]
@@ -35,9 +31,4 @@ def target_practice(map: str):
 
     return scored_points
 
-if __name__ == "__main__":
-    print(target_practice(sample_input1))
-    print(target_practice(sample_input2))
-    print(target_practice(sample_input3))
-    print(target_practice(sample_input4))
 
